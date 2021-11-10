@@ -1,13 +1,14 @@
+import Banner from "../components/Home/Banner";
 import Head from "next/head";
 import Header from "../components/Header/Header";
-import Layout from "../components/Layout/Layout";
 import navLinks from "../utils/navLinks";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div>
       <Head>
-        <title>Griffin Energ Consulting</title>
+        <title>Griffin Energ Consulting | Home</title>
+        {/* favicons */}
         <link
           rel="apple-touch-icon"
           sizes="76x76"
@@ -38,9 +39,8 @@ export default function Home() {
         />
       </Head>
 
-      <Layout>
-        <Header navLinks={navLinks} />
-      </Layout>
+      <Header navLinks={navLinks} />
+      <Banner />
     </div>
   );
 }
