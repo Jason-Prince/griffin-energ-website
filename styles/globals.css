@@ -14,4 +14,11 @@
   p {
     font-family: "Roboto", sans-serif;
   }
+  .flex-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* put on container grid grid-cols-[num] or grid-rows-[num} items-center justify-items-center */
+  }
 }
