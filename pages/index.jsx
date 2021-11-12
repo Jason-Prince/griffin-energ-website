@@ -39,7 +39,6 @@ export default function HomePage() {
         />
       </Head>
 
-      <Header navLinks={navLinks} />
       <Banner />
     </div>
   );
