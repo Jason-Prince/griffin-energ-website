@@ -4,10 +4,53 @@
 @tailwind components;
 @tailwind utilities;
 
+/* #231f20
+#4082a5
+#287a6b */
+
 @layer base {
   body {
-    @apply bg-gray-900;
+    @apply bg-gray-900 
+    w-screen 
+    h-screen 
+    p-0 
+    m-0;
   }
+  .nav {
+    @apply grid
+    grid-cols-2
+    justify-items-center
+    items-center
+    p-4;
+  }
+  .cls-1 {
+    @apply fill-current
+    text-gray-100;
+  }
+  .cls-2 {
+    @apply fill-current
+    text-[#4082a5];
+  }
+  .cls-3 {
+    @apply fill-current
+    text-[#287a6b];
+  }
+  .links {
+    @apply grid 
+    md:grid-cols-7 
+    md:items-center 
+    md:justify-items-center;
+  }
+  .link {
+    @apply text-gray-100
+    border-2
+    px-3
+    py-1
+    whitespace-nowrap
+    border-gray-900
+    hover:border-gray-100;
+  }
+
   .banner {
     @apply grid 
     grid-rows-2 
@@ -16,7 +59,6 @@
     gap-4
     my-16
     border-gray-100 
-    
     md:grid-rows-1 
     md:grid-cols-2 
     md:justify-items-start 
@@ -33,6 +75,8 @@
       text-4xl
       p-8
       text-center 
+      self-end
+      md:self-center
       md:justify-self-end
       md:leading-snug
       md:tracking-wide;
@@ -43,6 +87,7 @@
       justify-items-center
       font-Montserrat
     text-gray-100
+      md:self-center
       md:justify-items-start
       md:p-10;
   }
@@ -64,7 +109,6 @@
     self-end
     leading-snug 
     tracking-wide
-    
     duration-300
     hover:text-gray-900
     hover:border-gray-900

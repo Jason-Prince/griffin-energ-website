@@ -40,7 +40,7 @@ const Banner = () => {
       );
   }, []);
   return (
-    <div>
+    <div className="h-screen grid">
       <div className="banner">
         <div ref={$bannerLeft} className="bannerLeft">
           <p>Saving the</p>

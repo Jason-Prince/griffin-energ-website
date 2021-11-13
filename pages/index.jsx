@@ -1,4 +1,5 @@
 import Banner from "../components/Home/Banner";
+import Burger from "../components/Burger/Burger";
 import Head from "next/head";
 import Header from "../components/Header/Header";
 import navLinks from "../utils/navLinks";
@@ -38,7 +39,7 @@ export default function HomePage() {
           color="#5bbad5"
         />
       </Head>
-
+      <Burger />
       <Banner />
     </div>
   );

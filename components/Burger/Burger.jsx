@@ -1,11 +1,16 @@
 import Link from "next/link";
+import styles from "./burger.module.scss";
+import { useState } from "react";
 
-function Header({ navLinks }) {
+function Burger() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  console.log("isOpen: ", isOpen);
   return (
-    <div>
-      <nav className="nav">
+    <div className={styles.body}>
+      <div className={styles.grid}>
         {/* Logo */}
-        <svg viewBox="0 0 2298.41 170.62">
+        <svg className={styles.logo} viewBox="0 0 2298.41 170.62">
           <g id="Layer_2" data-name="Layer 2">
             <g id="Layer_1-2" data-name="Layer 1">
               <path
@@ -89,10 +94,56 @@ function Header({ navLinks }) {
             </g>
           </g>
         </svg>
+        <div></div>
         {/* Burger */}
-
+        <div className={`${styles.cross} ${styles.menu1}`}>
+          <label className={styles.label}>
+            <input
+              className={styles.input}
+              type="checkbox"
+              onClick={() => setIsOpen(!isOpen)}
+            />
+            <svg className={styles.svg} viewBox="0 0 100 100">
+              <circle className={styles.circle} cx="50" cy="50" r="30" />
+              <path
+                className={`${styles.path} ${styles.line1}`}
+                d="M0 40h62c13 0 6 28-4 18L35 35"
+              />
+              <path className={`${styles.path} ${styles.line2}`} d="M0 50h70" />
+              <path
+                className={`${styles.path} ${styles.line3}`}
+                d="M0 60h62c13 0 6-28-4-18L35 65"
+              />
+            </svg>
+          </label>
+        </div>
         {/* Menu */}
-        <div className="group links">
+        {isOpen && (
+          <div className={styles.menu}>
+            <Link href="/">
+              <a className="link">Home</a>
+            </Link>
+            <Link href="/services">
+              <a className="link">Services</a>
+            </Link>
+            <Link href="/portfolio">
+              <a className="link">Portfolio</a>
+            </Link>
+            <Link href="/aboutus">
+              <a className="link">About Us</a>
+            </Link>
+            <Link href="/latitudestudy">
+              <a className="link">Latitude Study</a>
+            </Link>
+            <Link href="/contact">
+              <a className="link">Contact</a>
+            </Link>
+            <Link href="/linkedin">
+              <a className="link">Linkedin</a>
+            </Link>
+          </div>
+        )}
+        <div className={styles.menuWide}>
           <Link href="/">
             <a className="link">Home</a>
           </Link>
@@ -115,9 +166,9 @@ function Header({ navLinks }) {
             <a className="link">Linkedin</a>
           </Link>
         </div>
-      </nav>
+      </div>
     </div>
   );
 }
 
-export default Header;
+export default Burger;
