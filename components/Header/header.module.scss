@@ -1,0 +1,186 @@
+// Colors
+$cultured: #f3f4f6;
+$blue-ncs: #4082a5;
+$pine-green: #287a6b;
+$rich-black-fogra-29: #111827;
+
+.fixedContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(calc(50vw - 50%));
+  z-index: 5;
+}
+
+// Header Grid Layout
+.headerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 4rem 1fr;
+  grid-template-areas:
+    "headerLogo menuToggle"
+    "home home"
+    "services services"
+    "portfolio portfolio"
+    "aboutus aboutus"
+    "latitudestudy latitudestudy"
+    "contact contact"
+    "linkedin linkedin";
+  justify-items: center;
+  align-items: center;
+  background-color: rgb(17, 24, 39);
+}
+@media (min-width: 768px) {
+  .headerGrid {
+    grid-template-columns: repeat(7, 7rem);
+    grid-template-rows: 4rem 3rem;
+    grid-template-areas:
+      "headerLogo headerLogo headerLogo headerLogo headerLogo headerLogo headerLogo"
+      "home services portfolio aboutus latitudestudy contact linkedin";
+  }
+}
+@media (min-width: 1024px) {
+  .headerGrid {
+    grid-template-columns: repeat(7, 9rem);
+  }
+}
+
+.navLinkHome {
+  grid-area: home;
+}
+.navLinkServices {
+  grid-area: services;
+}
+.navLinkPortfolio {
+  grid-area: portfolio;
+}
+.navLinkAboutUs {
+  grid-area: aboutus;
+}
+.navLinkLatitudeStudy {
+  grid-area: latitudestudy;
+}
+.navLinkContact {
+  grid-area: contact;
+}
+.navLinkLinkedIn {
+  grid-area: linkedin;
+}
+
+// navLink
+.navLink {
+  color: $cultured;
+  font-size: 1.25rem;
+  display: block;
+  margin: 1rem;
+  border-width: 2px;
+  padding: 0.25rem 0.75rem;
+  white-space: nowrap;
+  border-color: $rich-black-fogra-29;
+  &:hover {
+    border-color: $cultured;
+  }
+}
+@media (min-width: 768px) {
+  .navLink {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .navLink {
+    font-size: 1.25rem;
+  }
+}
+.hide {
+  display: none;
+}
+@media (min-width: 768px) {
+  .hide {
+    display: block;
+  }
+}
+
+// Header Logo
+.headerLogo {
+  grid-area: headerLogo;
+  justify-self: center;
+  align-self: center;
+  margin-left: 1rem;
+  width: 25rem;
+}
+.cls1 {
+  fill: $cultured;
+}
+.cls2 {
+  fill: $blue-ncs;
+}
+.cls3 {
+  fill: $pine-green;
+}
+
+// Menu Toggle
+.menuToggle {
+  grid-area: menuToggle;
+  justify-self: end;
+  .line1,
+  .line3 {
+    --total-length: 126.64183044433594;
+  }
+  .line2 {
+    --total-length: 70;
+  }
+  .input:checked + .svg {
+    .line1,
+    .line3 {
+      --offset: -94.1149185097;
+    }
+    .line2 {
+      --offset: -50;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .menuToggle {
+    display: none;
+  }
+}
+.path {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  --length: 24;
+  --offset: -38;
+  stroke-dasharray: var(--length) var(--total-length);
+  stroke-dashoffset: var(--offset);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.circle {
+  fill: #fff3;
+  opacity: 0;
+}
+.label:hover .circle {
+  opacity: 1;
+}
+.back .input:checked + .svg {
+  .line--1,
+  .line--3 {
+    --length: 8.602325267;
+  }
+}
+.cross .input:checked + .svg {
+  .line1,
+  .line3 {
+    --length: 22.627416998;
+  }
+  .line2 {
+    --length: 0;
+  }
+}
+.input {
+  display: none;
+}
+.svg {
+  width: 4rem;
+}
