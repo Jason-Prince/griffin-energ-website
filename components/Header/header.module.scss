@@ -48,9 +48,20 @@ $rich-black-fogra-29: #111827;
 .navLinkHome {
   grid-area: home;
 }
+
 .navLinkServices {
   grid-area: services;
 }
+.navLinkServicesDropdown {
+  position: relative;
+  display: inline-block;
+}
+.navLinkServicesDropdownContent {
+  display: none;
+  position: absolute;
+  z-index: 5;
+}
+
 .navLinkPortfolio {
   grid-area: portfolio;
 }
