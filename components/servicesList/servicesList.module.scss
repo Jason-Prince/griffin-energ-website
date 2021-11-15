@@ -11,7 +11,7 @@ $rich-black-fogra-29: #111827;
 // font-family: 'Montserrat', sans-serif;
 // font-family: 'Roboto', sans-serif;
 .container {
-  margin-top: 4rem;
+  margin-top: 12rem;
   margin-right: 1rem;
   margin-left: 1rem;
   display: grid;
@@ -20,7 +20,7 @@ $rich-black-fogra-29: #111827;
   justify-items: center;
   align-items: center;
   @media (min-width: 768px) {
-    margin-top: 8rem;
+    margin-top: 12rem;
   }
   @media (min-width: 1024px) {
     margin-top: 15rem;
@@ -48,7 +48,7 @@ $rich-black-fogra-29: #111827;
       "text";
     align-items: center;
     justify-items: center;
-    @media (min-width: 1024px) {
+    @media (min-width: 1210px) {
       grid-template-columns: 1fr 1.5fr;
       grid-template-areas: "img text";
     }
@@ -57,22 +57,17 @@ $rich-black-fogra-29: #111827;
       grid-area: img;
       padding: 0 2rem;
       width: 490px;
-      @media (min-width: 1024px) {
+      @media (min-width: 1210px) {
         padding: 0;
         width: 446px;
       }
     }
     .cardContent {
       grid-area: text;
-
-      padding: 0 2rem;
-      width: 490px;
+      padding: 2rem;
+      width: 669px;
       display: grid;
       gap: 1rem;
-      @media (min-width: 768px) {
-        padding: 2rem;
-        width: 735px;
-      }
 
       .title {
         font-family: "Montserrat", sans-serif;
@@ -80,7 +75,7 @@ $rich-black-fogra-29: #111827;
         font-weight: 500;
         letter-spacing: 2px;
         color: $cultured;
-        @media (min-width: 1024px) {
+        @media (min-width: 768px) {
           font-size: 2rem;
         }
       }
@@ -91,7 +86,7 @@ $rich-black-fogra-29: #111827;
         letter-spacing: 1px;
         font-size: 1rem;
         color: $cultured;
-        @media (min-width: 1024px) {
+        @media (min-width: 768px) {
           font-size: 1.5rem;
         }
       }
@@ -106,7 +101,7 @@ $rich-black-fogra-29: #111827;
       "text";
     align-items: center;
     justify-items: center;
-    @media (min-width: 1024px) {
+    @media (min-width: 1210px) {
       grid-template-columns: 1.5fr 1fr;
       grid-template-areas: "text img";
     }
@@ -115,21 +110,17 @@ $rich-black-fogra-29: #111827;
       grid-area: img;
       padding: 0 2rem;
       width: 490px;
-      @media (min-width: 1024px) {
+      @media (min-width: 1210px) {
         padding: 0;
         width: 446px;
       }
     }
     .cardContent {
       grid-area: text;
-      padding: 0 2rem;
-      width: 490px;
+      padding: 2rem;
+      width: 669px;
       display: grid;
       gap: 1rem;
-      @media (min-width: 768px) {
-        padding: 2rem;
-        width: 735px;
-      }
 
       .title {
         font-family: "Montserrat", sans-serif;
@@ -137,7 +128,7 @@ $rich-black-fogra-29: #111827;
         font-weight: 500;
         letter-spacing: 2px;
         color: $cultured;
-        @media (min-width: 1024px) {
+        @media (min-width: 768px) {
           font-size: 2rem;
         }
       }
@@ -148,7 +139,7 @@ $rich-black-fogra-29: #111827;
         letter-spacing: 1px;
         font-size: 1rem;
         color: $cultured;
-        @media (min-width: 1024px) {
+        @media (min-width: 768px) {
           font-size: 1.5rem;
         }
       }
