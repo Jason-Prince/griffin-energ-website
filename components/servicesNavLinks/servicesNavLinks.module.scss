@@ -1,0 +1,23 @@
+$cultured: #f3f4f6;
+$blue-ncs: #4082a5;
+$pine-green: #287a6b;
+$rich-black-fogra-29: #111827;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+.servicesNavLinks {
+  .servicesNavLink {
+    .servicesNavName {
+      font-family: "Montserrat", sans-serif;
+      color: $cultured;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      padding: 0 0.5rem;
+      border: 2px solid $rich-black-fogra-29;
+      white-space: nowrap;
+      &:hover {
+        border: 2px solid $cultured;
+      }
+    }
+  }
+}

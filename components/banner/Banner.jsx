@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 
 import { SplitText } from "gsap/dist/SplitText";
 import { gsap } from "gsap";
+import styles from "./banner.module.scss";
 import { useRouter } from "next/router";
 
 gsap.registerPlugin(SplitText);
@@ -40,21 +41,21 @@ const Banner = () => {
       );
   }, []);
   return (
-    <div className="h-screen grid">
-      <div className="banner">
-        <div ref={$bannerLeft} className="bannerLeft">
+    <div className={styles.container}>
+      <div className={styles.banner}>
+        <div ref={$bannerLeft} className={styles.left}>
           <p>Saving the</p>
           <p>World One</p>
           <p>Building at</p>
           <p>a Time</p>
         </div>
-        <div ref={$bannerRight} className="bannerRight">
-          <p className="bannerRightItem">Save money</p>
-          <p className="bannerRightItem">Save energy</p>
-          <p className="bannerRightItem">Save the planet</p>
+        <div ref={$bannerRight} className={styles.right}>
+          <p>Save money</p>
+          <p>Save energy</p>
+          <p>Save the planet</p>
           <button
             onClick={() => router.push("/contact")}
-            className="bannerButton"
+            className={styles.button}
           >
             START NOW
           </button>

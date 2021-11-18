@@ -1,117 +1,180 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+$cultured: #f3f4f6;
+$blue-ncs: #4082a5;
+$pine-green: #287a6b;
+$rich-black-fogra-29: #111827;
 
-/* #231f20
-#4082a5
-#287a6b */
-
-@layer base {
-  body {
-    @apply bg-gray-900 
-    w-screen 
-    h-screen 
-    p-0 
-    m-0;
-  }
-  .nav {
-    @apply grid
-    grid-cols-2
-    justify-items-center
-    items-center
-    p-4;
-  }
-  .cls-1 {
-    @apply fill-current
-    text-gray-100;
-  }
-  .cls-2 {
-    @apply fill-current
-    text-[#4082a5];
-  }
-  .cls-3 {
-    @apply fill-current
-    text-[#287a6b];
-  }
-  .links {
-    @apply grid 
-    md:grid-cols-7 
-    md:items-center 
-    md:justify-items-center;
-  }
-  .link {
-    @apply text-gray-100
-    border-2
-    px-3
-    py-1
-    whitespace-nowrap
-    border-gray-900
-    hover:border-gray-100;
-  }
-
-  .banner {
-    @apply grid 
-    grid-rows-2 
-    items-start 
-    justify-items-center
-    gap-4
-    my-16
-    border-gray-100 
-    md:grid-rows-1 
-    md:grid-cols-2 
-    md:justify-items-start 
-    md:my-52
-    md:gap-0;
-  }
-  .bannerLeft {
-    @apply grid 
-      gap-3
-      border-4
-      font-Montserrat
-      font-medium 
-      text-gray-100
-      text-4xl
-      p-8
-      text-center 
-      self-end
-      md:self-center
-      md:justify-self-end
-      md:leading-snug
-      md:tracking-wide;
-  }
-  .bannerRight {
-    @apply grid 
-      gap-2
-      justify-items-center
-      font-Montserrat
-    text-gray-100
-      md:self-center
-      md:justify-items-start
-      md:p-10;
-  }
-  .bannerRightItem {
-    @apply font-medium 
-      text-4xl 
-      md:leading-snug 
-      md:tracking-wide;
-  }
-  .bannerButton {
-    @apply border-solid
-    border-2
-    mt-4
-    px-9
-    py-2
-    rounded-xl
-    text-2xl 
-    font-semibold 
-    self-end
-    leading-snug 
-    tracking-wide
-    duration-300
-    hover:text-gray-900
-    hover:border-gray-900
-    hover:bg-gray-100;
-  }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+// .container {
+//   width: 1280px;
+//   min-width: 1280px;
+//   margin: 0 auto;
+//   .wrapper {
+//     padding: 0 48px;
+//     .home {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       height: 100%;
+//       width: 100%;
+//       p {
+//         font-size: 0.75rem;
+//         letter-spacing: 0.3rem;
+//         font-weight: 500;
+//       }
+//       h5 {
+//         margin-top: 260px;
+//         font-size: 1.5rem;
+//         font-weight: 600;
+//         padding-right: 360px;
+//       }
+//     }
+//   }
+// }
+
+// header {
+//   height: 100px;
+//   .inner-header {
+//     position: relative;
+//     z-index: 10;
+//     height: 100px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     .logo a {
+//       font-weight: 700;
+//       text-decoration: none;
+//       color: black;
+//     }
+//     .menu {
+//       border: none;
+//       background: none;
+//       outline: none;
+//       cursor: pointer;
+//       font-size: 0.8rem;
+//       color: black;
+//     }
+//   }
+//   .hamburger-menu {
+//     // display: none;
+//     z-index: 9;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     position: fixed;
+//     height: 100%;
+//     width: 100%;
+//     .menu-secondary-background-color {
+//       top: 0;
+//       bottom: 0;
+//       left: 0;
+//       right: 0;
+//       position: fixed;
+//       height: 100%;
+//       width: 100%;
+//       background-color: black;
+//       z-index: -1;
+//     }
+//     .menu-layer {
+//       position: relative;
+//       background: red;
+//       height: 100%;
+//       overflow: hidden;
+//       .menu-city-background {
+//         top: 0;
+//         bottom: 0;
+//         left: 0;
+//         right: 0;
+//         position: absolute;
+//         height: 100%;
+//         width: 100%;
+//         opacity: 0;
+//       }
+//       .wrapper {
+//         position: relative;
+//         .menu-links {
+//           display: flex;
+//           justify-content: space-between;
+//           align-items: center;
+//           position: relative;
+//           top: 200px;
+//           nav {
+//             display: block;
+//             ul {
+//               padding: 0;
+//               margin: 0;
+//               li {
+//                 list-style: none;
+//                 font-size: 6rem;
+//                 font-weight: 700;
+//                 cursor: pointer;
+//                 height: 135px;
+//                 overflow: hidden;
+//                 position: relative;
+//                 width: 700px;
+//                 a {
+//                   position: absolute;
+//                   color: white;
+//                   text-decoration: none;
+//                   &:hover {
+//                     color: black;
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//           .info {
+//             color: white;
+//             h3 {
+//               font-size: 1.2rem;
+//               margin: 8px auto;
+//             }
+//             p {
+//               margin: 0 auto;
+//               font-size: 0.8rem;
+//             }
+//           }
+//         }
+//         .locations {
+//           position: absolute;
+//           bottom: -80px;
+//           color: white;
+//           margin-top: 16px;
+//           font-size: 0.8rem;
+//           font-weight: 600;
+//           span {
+//             &:first-child {
+//               margin-left: 64px;
+//             }
+//             font-weight: 400;
+//             cursor: pointer;
+//             margin: 0 32px;
+//             transition: 0.3s ease-in-out;
+//             &:hover {
+//               background: black;
+//               padding: 8px 24px;
+//               border-radius: 4px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

@@ -1,12 +1,14 @@
+import "normalize.css";
 import "../styles/globals.scss";
 
-import Header from "../components/Header/Header";
+import Body from "../components/body/Body";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Header />
-      <Component {...pageProps} />
+      <Body>
+        <Component {...pageProps} />
+      </Body>
     </>
   );
 }

@@ -1,0 +1,24 @@
+$cultured: #f3f4f6;
+$blue-ncs: #4082a5;
+$pine-green: #287a6b;
+$rich-black-fogra-29: #111827;
+
+// Header Logo
+.logo {
+  grid-area: headerLogo;
+  justify-self: center;
+  align-self: center;
+  width: 25rem;
+  @media (min-width: 1210px) {
+    width: 35rem;
+  }
+}
+.cls1 {
+  fill: $cultured;
+}
+.cls2 {
+  fill: $blue-ncs;
+}
+.cls3 {
+  fill: $pine-green;
+}

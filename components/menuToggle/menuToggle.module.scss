@@ -1,0 +1,68 @@
+$cultured: #f3f4f6;
+$blue-ncs: #4082a5;
+$pine-green: #287a6b;
+$rich-black-fogra-29: #111827;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+.menuToggle {
+  display: grid;
+  fill: $cultured;
+  place-items: center;
+  width: 2rem;
+  .menuToggleBurger {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .menuToggleCross {
+    display: none;
+  }
+}
+
+.links {
+  position: absolute;
+  top: 300%;
+  right: 0;
+  transform: translate(758px, 0px);
+
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  align-items: center;
+
+  text-align: left;
+  z-index: 2;
+  background-color: $rich-black-fogra-29;
+}
+
+.navLinks {
+  .navLink {
+    .navName {
+      font-family: "Montserrat", sans-serif;
+      color: $cultured;
+      font-size: 1.5rem;
+      letter-spacing: 3px;
+      padding: 0 0.5rem;
+      border: 2px solid $rich-black-fogra-29;
+      &:hover {
+        border: 2px solid $cultured;
+      }
+    }
+  }
+}
+
+.servicesNavLinks {
+  .servicesNavLink {
+    .servicesNavName {
+      font-family: "Montserrat", sans-serif;
+      color: $cultured;
+      font-size: 1.5rem;
+      letter-spacing: 3px;
+      padding: 0 0.5rem;
+      border: 2px solid $rich-black-fogra-29;
+      white-space: nowrap;
+      text-align: left;
+      &:hover {
+        border: 2px solid $cultured;
+      }
+    }
+  }
+}

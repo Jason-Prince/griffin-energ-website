@@ -4,12 +4,49 @@ $blue-ncs: #4082a5;
 $pine-green: #287a6b;
 $rich-black-fogra-29: #111827;
 
-.fixedContainer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(calc(50vw - 50%));
-  z-index: 5;
+.container {
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  position: relative;
+
+  .header {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .left {
+      position: fixed;
+      height: 52px;
+      width: 100vw;
+      background-color: $rich-black-fogra-29;
+      top: 0;
+      left: 0;
+      .logo {
+        width: 70vw;
+        margin: 1rem;
+      }
+    }
+    .right {
+      position: fixed;
+      top: 0;
+      right: 0;
+
+      height: 52px;
+      background-color: $rich-black-fogra-29;
+      .button {
+        margin: 1rem;
+        color: $rich-black-fogra-29;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+    }
+  }
 }
 
 // Header Grid Layout
