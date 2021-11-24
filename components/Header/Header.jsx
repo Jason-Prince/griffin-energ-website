@@ -8,7 +8,6 @@ const Header = () => {
     <>
       <div className={styles.container}>
         <div className={styles.header}>
-          <div className={styles.left}>
             <svg className={styles.logo} viewBox="0 0 2298.41 170.62">
               <g>
                 <path
@@ -94,10 +93,7 @@ const Header = () => {
                 />
               </g>
             </svg>
-          </div>
-          <div className={styles.right}>
             <button className={styles.button}>Menu</button>
-          </div>
           {/* <div className={styles.right}>
             <label className={styles.label}>
               <input
