@@ -1,9 +1,45 @@
+// Colors
+$cultured: #f3f4f6;
+$blue-ncs: #4082a5;
+$pine-green: #287a6b;
+$rich-black-fogra-29: #111827;
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
 .navMenu {
   position: absolute;
   top: 64px;
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: red;
+  background-color: $rich-black-fogra-29;
   z-index: 5;
+  .navLinks {
+    height: 80vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, .25fr);
+    justify-items: center;
+    align-items: center;
+    .navLink {
+     
+      .navName {
+        font-family: "Montserrat", sans-serif;
+        color: $cultured;
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+        padding: 0 0.5rem;
+        border: 2px solid $rich-black-fogra-29;
+        text-decoration: none;
+        &:hover {
+          border: 2px solid $cultured;
+        }
+      }
+    }
+  }
 }
