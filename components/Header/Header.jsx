@@ -1,9 +1,10 @@
 import Link from "next/link";
 import styles from "./header.module.scss";
 import { useState } from "react";
+import NavMenu from "../navMenu/NavMenu";
 
 const Header = () => {
-  const [isMenuToggleOpen, setIsMenuToggleOpen] = useState(false);
+  const [isNavMenuOpen, setIsNavMenuOpen] = useState(false)
   return (
     <>
       <div className={styles.container}>
@@ -92,108 +93,10 @@ const Header = () => {
                   d="M1217.41,88.53H1159.5V63.2h57.91"
                 />
               </g>
-            </svg>
-            <button className={styles.button}>Menu</button>
-          {/* <div className={styles.right}>
-            <label className={styles.label}>
-              <input
-                className={styles.input}
-                type="checkbox"
-                onClick={() => setIsMenuToggleOpen(!isMenuToggleOpen)}
-              />
-              <svg className={styles.svg} viewBox="0 0 100 100">
-                <circle className={styles.circle} cx="50" cy="50" r="30" />
-                <path
-                  className={`${styles.path} ${styles.line1}`}
-                  d="M0 40h62c13 0 6 28-4 18L35 35"
-                />
-                <path
-                  className={`${styles.path} ${styles.line2}`}
-                  d="M0 50h70"
-                />
-                <path
-                  className={`${styles.path} ${styles.line3}`}
-                  d="M0 60h62c13 0 6-28-4-18L35 65"
-                />
-              </svg>
-            </label>
-          </div> */}
-
-          {/* {isMenuToggleOpen && (
-            <>
-              <div className={styles.navLinkHome}>
-                <Link href="/">
-                  <a className={styles.navLink}>Home</a>
-                </Link>
-              </div>
-              <div className={styles.navLinkServices}>
-                <Link href="/services">
-                  <a className={styles.navLink}>Services</a>
-                </Link>
-              </div>
-              <div className={styles.navLinkPortfolio}>
-                <Link href="/portfolio">
-                  <a className={styles.navLink}>Portfolio</a>
-                </Link>
-              </div>
-              <div className={styles.navLinkAboutUs}>
-                <Link href="/aboutus">
-                  <a className={styles.navLink}>About Us</a>
-                </Link>
-              </div>
-              <div className={styles.navLinkLatitudeStudy}>
-                <Link href="/latitudestudy">
-                  <a className={styles.navLink}>Latitude Study</a>
-                </Link>
-              </div>
-              <div className={styles.navLinkContact}>
-                <Link href="/contact">
-                  <a className={styles.navLink}>Contact</a>
-                </Link>
-              </div>
-              <div className={styles.navLinkLinkedIn}>
-                <Link href="/linkedin">
-                  <a className={styles.navLink}>Linkedin</a>
-                </Link>
-              </div>
-            </>
-          )} */}
-
-          {/* <div className={`${styles.navLinkHome} ${styles.hide}`}>
-            <Link href="/">
-              <a className={`${styles.navLink} ${styles.hide}`}>Home</a>
-            </Link>
-          </div>
-          <div className={`${styles.navLinkServices} ${styles.hide}`}>
-            <Link href="/services">
-              <a className={styles.navLink}>Services</a>
-            </Link>
-          </div>
-          <div className={`${styles.navLinkPortfolio} ${styles.hide}`}>
-            <Link href="/portfolio">
-              <a className={styles.navLink}>Portfolio</a>
-            </Link>
-          </div>
-          <div className={`${styles.navLinkAboutUs} ${styles.hide}`}>
-            <Link href="/aboutus">
-              <a className={styles.navLink}>About Us</a>
-            </Link>
-          </div>
-          <div className={`${styles.navLinkLatitudeStudy} ${styles.hide}`}>
-            <Link href="/latitudestudy">
-              <a className={styles.navLink}>Latitude Study</a>
-            </Link>
-          </div>
-          <div className={`${styles.navLinkContact} ${styles.hide}`}>
-            <Link href="/contact">
-              <a className={styles.navLink}>Contact</a>
-            </Link>
-          </div>
-          <div className={`${styles.navLinkLinkedIn} ${styles.hide}`}>
-            <Link href="/linkedin">
-              <a className={styles.navLink}>Linkedin</a>
-            </Link>
-          </div> */}
+          </svg>
+          {!isNavMenuOpen && <button onClick={() => setIsNavMenuOpen(true)} className={styles.button}>Menu</button>}
+          {isNavMenuOpen && <button onClick={() => setIsNavMenuOpen(false)} className={styles.button}>Close</button>}
+          {isNavMenuOpen && <NavMenu />}
         </div>
       </div>
     </>

@@ -5,7 +5,7 @@ $pine-green: #287a6b;
 $rich-black-fogra-29: #111827;
 
 .container {
-  width: 113vw;
+  width: 100vw;
   height: 4rem;
   display: grid;
   grid-template-columns: 1fr;
@@ -19,6 +19,12 @@ $rich-black-fogra-29: #111827;
       grid-area: logo;
       width: 18rem;
       margin: 1rem;
+      border: 2px solid $rich-black-fogra-29;
+      cursor: pointer;
+      padding: .4rem .5rem .25rem .5rem;
+      &:hover{
+        border: 2px solid $cultured;
+      }
     }
     .button {
       grid-area: button;
@@ -27,19 +33,25 @@ $rich-black-fogra-29: #111827;
       display: block;
       margin: 1rem 2rem;
       padding: .25rem .5rem;
-      border: 2px solid $cultured;
+      border: 2px solid $rich-black-fogra-29;
       color: $cultured;
       background-color: $rich-black-fogra-29;
       font-family: "Montserrat", sans-serif;
-      font-size: 1rem;
+      font-size: 1.25rem;
       font-weight: 400;
       letter-spacing: 1px;
       cursor: pointer;
       &:hover{
-        border: 2px solid $pine-green;
+        border: 2px solid $cultured;
       }
     }
   }
+}
+
+.navMenu {
+  position: absolute;
+  top: 0 ;
+  left: 0;
 }
 
 // Header Grid Layout
