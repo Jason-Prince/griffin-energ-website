@@ -4,6 +4,13 @@ $blue-ncs: #4082a5;
 $pine-green: #287a6b;
 $rich-black-fogra-29: #111827;
 
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+
 .container {
   width: 100vw;
   height: 4rem;
@@ -18,12 +25,15 @@ $rich-black-fogra-29: #111827;
     .logo {
       grid-area: logo;
       width: 18rem;
-      margin: 1rem;
+      margin: 1rem 0;
       border: 2px solid $rich-black-fogra-29;
       cursor: pointer;
       padding: .4rem .5rem .25rem .5rem;
       &:hover{
         border: 2px solid $cultured;
+      }
+      @media (min-width: $breakpoint-sm) {
+        margin: 1rem;
       }
     }
     .button {
@@ -31,7 +41,7 @@ $rich-black-fogra-29: #111827;
       width: 5rem;
       justify-self: end;
       display: block;
-      margin: 1rem 2rem;
+      margin: 1rem 0;
       padding: .25rem .5rem;
       border: 2px solid $rich-black-fogra-29;
       color: $cultured;
@@ -44,14 +54,11 @@ $rich-black-fogra-29: #111827;
       &:hover{
         border: 2px solid $cultured;
       }
+      @media (min-width: $breakpoint-sm) {
+        margin: 1rem 2rem;
+      }
     }
   }
-}
-
-.navMenu {
-  position: absolute;
-  top: 0 ;
-  left: 0;
 }
 
 // Header Grid Layout
