@@ -1,40 +1,41 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react';
 
-import { SplitText } from "gsap/dist/SplitText";
-import { gsap } from "gsap";
-import styles from "./banner.module.scss";
-import { useRouter } from "next/router";
+import { SplitText } from 'gsap/dist/SplitText';
+import { gsap } from 'gsap';
+import styles from './banner.module.scss';
+import { useRouter } from 'next/router';
 
 gsap.registerPlugin(SplitText);
 
 const Banner = () => {
-  const $bannerLeft = useRef(null);
-  const $bannerRight = useRef(null);
+  const $bannerFirst = useRef(null);
+  const $bannerSecond = useRef(null);
+  const $bannerThird = useRef(null);
   const router = useRouter();
 
   useEffect(() => {
-    const bannerLeftSplitText = new SplitText($bannerLeft.current, {
-      type: "chars",
+    const bannerFirstSplitText = new SplitText($bannerFirst.current, {
+      type: 'chars',
     });
-    const bannerRightSplitText = new SplitText($bannerRight.current, {
-      type: "lines",
+    const bannerSecondSplitText = new SplitText($bannerSecond.current, {
+      type: 'lines',
     });
     gsap
       .timeline()
-      .from(bannerLeftSplitText.chars, {
+      .from(bannerFirstSplitText.chars, {
         opacity: 0,
         y: 50,
-        ease: "back(4)",
-        stagger: { from: "start", each: 0.1 },
+        ease: 'back(4)',
+        stagger: { from: 'start', each: 0.1 },
       })
       .from(
-        bannerRightSplitText.lines,
+        bannerSecondSplitText.lines,
         {
           duration: 0.5,
           opacity: 0,
           rotationX: -120,
           force3D: true,
-          transformOrigin: "top center -150",
+          transformOrigin: 'top center -150',
           stagger: 1,
         },
         4
@@ -43,22 +44,25 @@ const Banner = () => {
   return (
     <div className={styles.container}>
       <div className={styles.banner}>
-        <div ref={$bannerLeft} className={styles.left}>
+        <div ref={$bannerFirst} className={styles.first}>
           <p>Saving the</p>
           <p>World One</p>
           <p>Building at</p>
           <p>a Time</p>
         </div>
-        <div ref={$bannerRight} className={styles.right}>
+        <div ref={$bannerSecond} className={styles.second}>
           <p>Save money</p>
           <p>Save energy</p>
           <p>Save the planet</p>
           <button
-            onClick={() => router.push("/contact")}
+            onClick={() => router.push('/contact')}
             className={styles.button}
           >
             START NOW
           </button>
+        </div>
+        <div ref={$bannerThird} className={styles.third}>
+          <i className={styles.arrowDown}></i>
         </div>
       </div>
     </div>
