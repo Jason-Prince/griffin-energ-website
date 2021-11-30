@@ -14,15 +14,14 @@ $breakpoint-2xl: 1536px;
 
   display: flex;
   justify-content: center;
-  align-items: start;
-  margin-top: 3rem;
+  align-items: center;
 
   .banner {
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
 
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: 1px;

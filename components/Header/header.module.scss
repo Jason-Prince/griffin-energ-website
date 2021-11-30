@@ -11,6 +11,7 @@ $breakpoint-xl: 1280px;
 $breakpoint-2xl: 1536px;
 
 .container {
+  position: fixed;
   width: 100vw;
   height: 4rem;
   display: grid;
@@ -19,7 +20,7 @@ $breakpoint-2xl: 1536px;
   .header {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'logo button';
+    grid-template-areas: "logo button";
     align-items: center;
     .logo {
       grid-area: logo;
@@ -45,7 +46,7 @@ $breakpoint-2xl: 1536px;
       border: 2px solid $rich-black-fogra-29;
       color: $cultured;
       background-color: $rich-black-fogra-29;
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-size: 1.25rem;
       font-weight: 400;
       letter-spacing: 1px;
@@ -66,14 +67,14 @@ $breakpoint-2xl: 1536px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 4rem 1fr;
   grid-template-areas:
-    'headerLogo menuToggle'
-    'home home'
-    'services services'
-    'portfolio portfolio'
-    'aboutus aboutus'
-    'latitudestudy latitudestudy'
-    'contact contact'
-    'linkedin linkedin';
+    "headerLogo menuToggle"
+    "home home"
+    "services services"
+    "portfolio portfolio"
+    "aboutus aboutus"
+    "latitudestudy latitudestudy"
+    "contact contact"
+    "linkedin linkedin";
   justify-items: center;
   align-items: center;
   background-color: rgb(17, 24, 39);
@@ -83,8 +84,8 @@ $breakpoint-2xl: 1536px;
     grid-template-columns: repeat(7, 7rem);
     grid-template-rows: 4rem 3rem;
     grid-template-areas:
-      'headerLogo headerLogo headerLogo headerLogo headerLogo headerLogo headerLogo'
-      'home services portfolio aboutus latitudestudy contact linkedin';
+      "headerLogo headerLogo headerLogo headerLogo headerLogo headerLogo headerLogo"
+      "home services portfolio aboutus latitudestudy contact linkedin";
   }
 }
 @media (min-width: 1024px) {
