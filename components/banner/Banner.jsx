@@ -1,9 +1,9 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
-import { SplitText } from 'gsap/dist/SplitText';
-import { gsap } from 'gsap';
-import styles from './banner.module.scss';
-import { useRouter } from 'next/router';
+import { SplitText } from "gsap/dist/SplitText";
+import { gsap } from "gsap";
+import styles from "./banner.module.scss";
+import { useRouter } from "next/router";
 
 gsap.registerPlugin(SplitText);
 
@@ -15,18 +15,18 @@ const Banner = () => {
 
   useEffect(() => {
     const bannerFirstSplitText = new SplitText($bannerFirst.current, {
-      type: 'chars',
+      type: "chars",
     });
     const bannerSecondSplitText = new SplitText($bannerSecond.current, {
-      type: 'lines',
+      type: "lines",
     });
     gsap
       .timeline()
       .from(bannerFirstSplitText.chars, {
         opacity: 0,
         y: 50,
-        ease: 'back(4)',
-        stagger: { from: 'start', each: 0.1 },
+        ease: "back(4)",
+        stagger: { from: "start", each: 0.1 },
       })
       .from(
         bannerSecondSplitText.lines,
@@ -35,10 +35,27 @@ const Banner = () => {
           opacity: 0,
           rotationX: -120,
           force3D: true,
-          transformOrigin: 'top center -150',
+          transformOrigin: "top center -150",
           stagger: 1,
         },
         4
+      )
+      .fromTo(
+        $bannerThird.current,
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 2,
+          y: 100,
+          force3D: true,
+          // transformOrigin: "top center -150",
+          stagger: 1,
+          repeat: -1,
+          ease: "Bounce.easeOut",
+        },
+        8
       );
   }, []);
   return (
@@ -55,7 +72,7 @@ const Banner = () => {
           <p>Save energy</p>
           <p>Save the planet</p>
           <button
-            onClick={() => router.push('/contact')}
+            onClick={() => router.push("/contact")}
             className={styles.button}
           >
             START NOW
